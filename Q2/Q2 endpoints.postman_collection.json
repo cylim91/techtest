@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "53987048-4cda-459b-8ee9-6078414ffabe",
+		"name": "Q2 endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13573225"
+	},
+	"item": [
+		{
+			"name": "Generate Hash",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/rhm/generate_hash/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"rhm",
+						"generate_hash",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Hash",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/rhm/check_hash/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"rhm",
+						"check_hash",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
