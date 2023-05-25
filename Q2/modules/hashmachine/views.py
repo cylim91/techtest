@@ -20,6 +20,6 @@ class CheckHashView(generics.GenericAPIView):
         last_char = hash[-1]
 
         if last_char.isdigit() and int(last_char) % 2 == 0:
-            return Response({'hash': hash, 'result': 'not odd'}, status=400)
+            return Response({'hash': hash, 'result': 'not odd'}, status=500)
         else:
             return Response({'hash': hash, 'result': 'odd'}, status=200)
