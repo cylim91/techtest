@@ -28,6 +28,8 @@ This folder contains the answer for the second question.
 - `/rhm/get_odd_hash/`
 - `/rhm/get_optimized_odd_hash/`
 
+** These endpoints can be tested out in http://localhost:8000/doc/ **
+
 ---
 
 ### Running Tests

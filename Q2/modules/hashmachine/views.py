@@ -1,12 +1,18 @@
 from rest_framework          import generics
 from rest_framework.response import Response
 from .utils.common_utils     import multithread_get_random_hash
+from .serializers            import EmptySerializer
 
 import time
 import hashlib
 
 
 class RandomHashView(generics.GenericAPIView):
+    """
+    This view generates a random hash and returns it.
+    """
+    serializer_class = EmptySerializer
+
     def get(self, request, *args, **kwargs):
         # wait for one second
         time.sleep(1)
@@ -16,6 +22,12 @@ class RandomHashView(generics.GenericAPIView):
 
 
 class GetOddHashView(generics.GenericAPIView):
+    """
+    This view gets a random hash from RandomHashView and returns it if the last character is a digit and is odd.
+    """
+
+    serializer_class = EmptySerializer
+
     def get(self, request, *args, **kwargs):
         # gets hash from RandomHashView
         hash      = RandomHashView.get(self, request).data
@@ -30,7 +42,10 @@ class GetOddHashView(generics.GenericAPIView):
 
 
 class OptimizingOddHashView(generics.GenericAPIView):
-
+    """
+    This view gets a random hash from RandomHashView and returns it if the last character is a digit and is odd.
+    """
+    serializer_class = EmptySerializer
     def get(self, request, *args, **kwargs):
 
         hash = ''
