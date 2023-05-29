@@ -31,12 +31,12 @@
 			"response": []
 		},
 		{
-			"name": "Check Hash",
+			"name": "Get Odd Hash",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/rhm/check_hash/",
+					"raw": "http://127.0.0.1:8000/rhm/get_odd_hash/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -47,7 +47,31 @@
 					"port": "8000",
 					"path": [
 						"rhm",
-						"check_hash",
+						"get_odd_hash",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Odd Hash [Optimized]",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/rhm/get_optimized_odd_hash/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"rhm",
+						"get_optimized_odd_hash",
 						""
 					]
 				}

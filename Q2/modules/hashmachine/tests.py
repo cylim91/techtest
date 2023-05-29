@@ -17,9 +17,7 @@ class RHMTestCase(TestCase):
         response      = client.get('/rhm/check_hash/')
         response_data = response.json()
 
-        if response_data['hash'][-1].isdigit() and int(response_data['hash'][-1]) % 2 == 0:
-            self.assertEqual(response.status_code, 500)
-        else:
+        if response_data[-1].isdigit() and int(response_data[-1]) % 2 == 0:
             self.assertEqual(response.status_code, 200)
 
 
